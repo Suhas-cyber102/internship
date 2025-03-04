@@ -1,0 +1,126 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #032337;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;  /* Makes the navbar sticky */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it's always above other content */
+    transition: background 0.3s ease;
+}
+
+.navbar .logo {
+    font-size: 40px;
+    font-weight: bold;
+    color: #bfe809;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+.navbar ul li a {
+    color: #c1adad;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #f5c015;  /* Changed hover color for better contrast */
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(148, 113, 113, 0.5), rgba(209, 173, 173, 0.5)), url('img bang.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    color: #f6f5f5;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 700px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Button Styles */
+.hero .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ffb400;
+    color: #3a5e6f;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+.hero .btn:hover {
+    background-color: #fff;
+    color: #002e44;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(255, 180, 0, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .navbar ul {
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+
+    .hero .btn {
+        font-size: 16px;
+        padding: 10px 18px;
+    }
+}
